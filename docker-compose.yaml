@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+
+  app:
+    build: .
+    container_name: drivers-app
+    ports:
+      - 8081:8081
+    networks:
+      - maratona-microsservico-order_app-network
+
+networks:
+  maratona-microsservico-order_app-network:
+    external: true
